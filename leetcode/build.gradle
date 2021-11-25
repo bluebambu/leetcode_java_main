@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+compileJava {options.encoding = "UTF-8"}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // 1. Use Guava in your implementation only:
+    implementation("com.google.guava:guava:31.0.1-jre")
+}
